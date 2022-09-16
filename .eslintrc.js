@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'next/core-web-vitals',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,11 +18,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'react-hooks',
-  ],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
     'class-methods-use-this': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -58,5 +55,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'react/function-component-definition': 'off',
     'arrow-body-style': 'off',
+    'prettier/prettier': 'error',
   },
 };
