@@ -18,7 +18,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'react-hooks',
+    'prettier',
+    'import',
+    'import-helpers',
+  ],
   rules: {
     'class-methods-use-this': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -56,5 +63,18 @@ module.exports = {
     'react/function-component-definition': 'off',
     'arrow-body-style': 'off',
     'prettier/prettier': 'error',
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        newlinesBetween: 'always',
+        groups: [
+          '/^react/',
+          '/^next/',
+          'module',
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
   },
 };
