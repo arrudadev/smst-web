@@ -76,5 +76,7 @@ module.exports = {
         alphabetize: { order: 'asc', ignoreCase: true },
       },
     ],
+    'global-require': 'off',
+    '@next/next/no-img-element': 'off',
   },
 };
