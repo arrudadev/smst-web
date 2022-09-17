@@ -80,5 +80,6 @@ module.exports = {
     '@next/next/no-img-element': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'no-return-await': 'off',
   },
 };
