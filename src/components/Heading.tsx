@@ -1,4 +1,4 @@
-import { CheckIcon, LinkIcon } from '@heroicons/react/20/solid';
+import { PlusIcon, ArrowDownTrayIcon } from '@heroicons/react/20/solid';
 
 import { Container } from './Container';
 
@@ -17,20 +17,21 @@ export const Heading = () => {
             <button
               type="button"
               className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              title="Baixar todos os produtos"
             >
-              <LinkIcon
-                className="-ml-1 mr-2 h-5 w-5 text-gray-500"
+              <ArrowDownTrayIcon
+                className="h-5 w-5 text-gray-500"
                 aria-hidden="true"
               />
-              View
             </button>
 
             <button
               type="button"
               className="inline-flex ml-3 items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              title="Adicionar produto"
             >
-              <CheckIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-              Publish
+              <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+              Novo
             </button>
           </div>
         </div>

@@ -55,34 +55,34 @@ export const Table = () => {
                   key={product.id}
                   className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-3/5">
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-2/5">
                     {product.name}
                   </td>
-                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-2/5">
                     <Barcode value={`${product.value}`} />
                   </td>
                   <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <button
                       type="button"
                       className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      title="Download"
                     >
                       <ArrowDownTrayIcon
-                        className="-ml-1 mr-2 h-5 w-5 text-gray-500"
+                        className="h-5 w-5 text-gray-500"
                         aria-hidden="true"
                       />
-                      Download
                     </button>
                   </td>
                   <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     <button
                       type="button"
                       className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      title="Apagar"
                     >
                       <TrashIcon
-                        className="-ml-1 mr-2 h-5 w-5 text-gray-500"
+                        className="h-5 w-5 text-gray-500"
                         aria-hidden="true"
                       />
-                      Apagar
                     </button>
                   </td>
                 </tr>
