@@ -81,5 +81,7 @@ module.exports = {
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'no-return-await': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
+    'no-unused-vars': 'off',
   },
 };
