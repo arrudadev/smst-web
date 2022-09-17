@@ -1,7 +1,9 @@
 import type { NextPage } from 'next';
 
+import { Heading } from '../components/Heading';
+
 const Home: NextPage = () => {
-  return <h1>hello world</h1>;
+  return <Heading />;
 };
 
 export default Home;
