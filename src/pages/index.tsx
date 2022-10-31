@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import { Heading } from '../components/Heading';
-import { Modal } from '../components/Modal';
+import { ModalAddProduct } from '../components/ModalAddProduct';
 import { Table } from '../components/Table';
 
 const Home: NextPage = () => {
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
       <Table />
 
-      <Modal />
+      <ModalAddProduct />
     </>
   );
 };

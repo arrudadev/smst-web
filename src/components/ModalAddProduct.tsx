@@ -1,20 +1,15 @@
-import { Fragment, useRef, useState } from 'react';
+import { Fragment } from 'react';
 
 import { Dialog, Transition } from '@headlessui/react';
 
-export const Modal = () => {
-  const [open, setOpen] = useState(true);
+import { useModal } from '../hooks/useModal';
 
-  const cancelButtonRef = useRef(null);
+export const ModalAddProduct = () => {
+  const [isOpen, setIsOpen] = useModal();
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog
-        as="div"
-        className="relative z-10"
-        initialFocus={cancelButtonRef}
-        onClose={setOpen}
-      >
+    <Transition.Root show={isOpen} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={setIsOpen}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -71,15 +66,14 @@ export const Modal = () => {
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
+                    onClick={() => setIsOpen(false)}
                   >
                     Cadastrar
                   </button>
                   <button
                     type="button"
                     className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
-                    ref={cancelButtonRef}
+                    onClick={() => setIsOpen(false)}
                   >
                     Cancelar
                   </button>

@@ -1,8 +1,10 @@
 import { PlusIcon, ArrowDownTrayIcon } from '@heroicons/react/20/solid';
 
+import { useModal } from '../hooks/useModal';
 import { Container } from './Container';
 
 export const Heading = () => {
+  const [_, setIsOpen] = useModal();
   return (
     <div className="pt-10">
       <Container>
@@ -29,6 +31,7 @@ export const Heading = () => {
               type="button"
               className="inline-flex ml-3 items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               title="Adicionar produto"
+              onClick={() => setIsOpen(true)}
             >
               <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
               Novo
