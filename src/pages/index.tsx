@@ -1,19 +1,9 @@
 import type { NextPage } from 'next';
 
-import { Heading } from '../components/Heading';
-import { ModalAddProduct } from '../components/ModalAddProduct';
-import { Table } from '../components/Table';
+import { LoginForm } from '../components/LoginForm';
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Heading />
-
-      <Table />
-
-      <ModalAddProduct />
-    </>
-  );
+const Login: NextPage = () => {
+  return <LoginForm />;
 };
 
-export default Home;
+export default Login;
