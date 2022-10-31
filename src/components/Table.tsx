@@ -8,26 +8,31 @@ export const Table = () => {
     {
       id: 1,
       value: 890238409,
+      stock: 10,
       name: 'product 1',
     },
     {
       id: 2,
       value: 1241234,
+      stock: 10,
       name: 'product 2',
     },
     {
       id: 3,
       value: 34563456,
+      stock: 10,
       name: 'product 3',
     },
     {
       id: 4,
       value: 3463456678,
+      stock: 10,
       name: 'product 4',
     },
     {
       id: 5,
       value: 6789679,
+      stock: 10,
       name: 'product 5',
     },
   ];
@@ -43,6 +48,9 @@ export const Table = () => {
                   Nome
                 </th>
                 <th scope="col" className="py-3 px-6">
+                  Estoque
+                </th>
+                <th scope="col" className="py-3 px-6">
                   Código de barras
                 </th>
                 <th scope="col" className="py-3 px-6" />
@@ -55,10 +63,13 @@ export const Table = () => {
                   key={product.id}
                   className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-2/5">
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-1/4">
                     {product.name}
                   </td>
-                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-2/5">
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-1/4">
+                    {product.stock}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white w-1/4">
                     <Barcode value={`${product.value}`} />
                   </td>
                   <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
